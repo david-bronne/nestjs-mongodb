@@ -25,6 +25,13 @@
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+npm i @nestjs/mongoose mongoose
+## Project creation
+
+```bash
+$ nest new project-name
+$ npm i @nestjs/mongoose mongoose
+```
 
 ## Project setup
 
