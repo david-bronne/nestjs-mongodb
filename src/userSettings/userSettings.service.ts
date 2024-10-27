@@ -9,8 +9,8 @@ export class UserSettingsService{
     constructor( @InjectModel(UserSettings.name) private userSettingsModel: Model<UserSettings>){}
     
     createUserSettings(createUserSettingsDto:CreateUserSettingsDto){
-        const newUser = new this.userSettingsModel(createUserSettingsDto);
-        return newUser.save()
+        const newUserSettings = new this.userSettingsModel(createUserSettingsDto);
+        return newUserSettings.save()
     }
 
 }

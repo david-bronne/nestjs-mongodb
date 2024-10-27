@@ -15,11 +15,11 @@ export class UsersService{
     }
 
     getUsers(){
-        return this.userModel.find();
+        return this.userModel.find().populate(['settings', 'posts']);
     }
 
     getUserById(id:string){
-        return this.userModel.findById(id).populate('settings');
+        return this.userModel.findById(id).populate(['settings', 'posts']);
     }
 
     updateUserById(id: string, {settings, ...updateUserDto}: UpdateUserDto) {
