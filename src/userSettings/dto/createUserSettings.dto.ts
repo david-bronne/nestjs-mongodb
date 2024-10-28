@@ -1,6 +1,10 @@
-import { IsBoolean, IsOptional } from "class-validator";
+import { IsBoolean, IsNotEmpty, IsOptional, IsString } from "class-validator";
 
 export class CreateUserSettingsDto {
+    
+    @IsNotEmpty()
+    @IsString()
+    userId: string;
     
     @IsOptional()
     @IsBoolean()

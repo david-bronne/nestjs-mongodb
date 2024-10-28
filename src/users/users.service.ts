@@ -22,11 +22,7 @@ export class UsersService{
         return this.userModel.findById(id).populate(['settings', 'posts']);
     }
 
-    updateUserById(id: string, {settings, ...updateUserDto}: UpdateUserDto) {
-        if (settings) {
-            const settingsId = new Types.ObjectId(settings);
-            return this.userModel.findByIdAndUpdate(id, {...updateUserDto, settings: settingsId}, {new: true});
-        }
+    updateUserById(id: string, updateUserDto: UpdateUserDto) {
         return this.userModel.findByIdAndUpdate(id, updateUserDto, {new: true});
     }
 
